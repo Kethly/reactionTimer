@@ -1,3 +1,4 @@
+
 game = document.getElementById("game");
 ctx = game.getContext("2d");
 var preResults = "your results were: ";
@@ -102,7 +103,9 @@ function gameClick(){
     }
     else
     {
+      gameStarted = true;
       gameSetUp(ctx); 
+      clickAllowed = false
     }
   }
 }
