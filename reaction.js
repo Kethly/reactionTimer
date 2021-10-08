@@ -1,4 +1,3 @@
-window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000;
 game = document.getElementById("game");
 ctx = game.getContext("2d");
 var preResults = "your results were: ";
