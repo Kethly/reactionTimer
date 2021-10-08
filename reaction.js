@@ -30,6 +30,12 @@ function gameSetUp(ctx) {
 }
 
 async function preTest(ctx) {
+  screentext(ctx, "black", "this will first consist");
+  await sleep(1000);
+  screentext(ctx, "black", "of three reaction tests");
+  await sleep(2000);
+  screentext(ctx, "black", "good luck!");
+  await sleep(2000);
   await test(ctx);
   await sleep(1000);
   screentext(ctx, "black", "congratz on doing your first test");
