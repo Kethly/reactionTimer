@@ -155,7 +155,7 @@ const handleSubmit = (e) => {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: encode({
-      "form-name": formData.get("form-name"),
+      "form-name": "name",
       "name":"test",
       "reaction 1":"100ms"
     })
