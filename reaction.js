@@ -159,7 +159,7 @@ const handleSubmit = (e) => {
       "name":"test",
       "reaction 1":"100ms"
     })
-  })//.then(() => navigate("/thank-you/")).catch(error => alert(error))
+  }).then(() => console.log(`OK`))
   console.log(encode({
       "form-name": formData.get("form-name"),
       "name":"test",
