@@ -135,7 +135,7 @@ function gameTimer(){
   
 }
 const handleSubmit = (e) => {
-  //e.preventDefault()
+  e.preventDefault()
   //let myForm = document.getElementById('pizzaOrder');
   //let formData = new FormData(myForm)
   let myForm = document.getElementById('contact');
