@@ -1,6 +1,7 @@
 
 game = document.getElementById("game");
 ctx = game.getContext("2d");
+var preData;
 var preResults = "your results were: ";
 var gameStarted = false;
 function changeBack(ctx, color) {
@@ -82,6 +83,7 @@ function test(ctx) {
           console.log(end)
           console.log("reaction time of:" + (currentTime-start));
           preResults += Math.round((currentTime-start)* 1000).toString() + " ";
+          preData += Math.round((currentTime-start)* 1000).toString() + " ";
         console.log(preResults);
           resolve("resolve");
           clearInterval(timer);
@@ -147,9 +149,9 @@ const handleSubmit = (e) => {
   let formData = new FormData();
   formData.append("form-name", "reactionData");
   formData.append("name","Data");
-  formData.append("reaction 1", "100");
-  formData.append("reaction 2", "200");
-  formData.append("reaction 3", "300");
+  formData.append("post1", preData[0]);
+  formData.append("post2", preData[1]);
+  formData.append("post3", preData[2]);
   console.log("ran");
   fetch('/', {
   method: 'POST',
