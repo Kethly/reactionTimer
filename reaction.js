@@ -145,7 +145,8 @@ const handleSubmit = (e) => {
   //let formData = new FormData(myForm)
   //let myForm = document.getElementById('contact');
   let formData = new FormData();
-  formData.append("name","reactionData");
+  formData.append("form-name", "reactionData");
+  formData.append("name","Data");
   formData.append("reaction 1", "100");
   formData.append("reaction 2", "200");
   formData.append("reaction 3", "300");
@@ -153,6 +154,9 @@ const handleSubmit = (e) => {
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: formData
+    body: encode({
+      "form-name": formData.get("form-name"),
+      ...formData
+    })
   }).then(() => navigate("/thank-you/")).catch(error => alert(error))
 }
