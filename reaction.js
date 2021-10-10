@@ -150,12 +150,10 @@ const handleSubmit = (e) => {
   formData.append("reaction 2", "200");
   formData.append("reaction 3", "300");
   console.log("ran");
-  fetch("/", {
-    method: "POST",
+  fetch('/', {
+    method: 'POST',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode({
-      "form-name": formData.get("name"),
-      ...name
-    })
-  }).then(() => navigate("/thank-you/")).catch(error => alert(error))
+    body: new URLSearchParams(formData).toString()
+  }).then(() => console.log('Form successfully submitted')).catch((error) =>
+    alert(error))
 }
