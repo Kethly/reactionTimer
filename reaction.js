@@ -149,10 +149,10 @@ const handleSubmit = (e) => {
   let formData = new FormData();
   formData.append("form-name", "reactionData");
   formData.append("name","Data");
-  var dataToSend = preData.split(" ");
-  formData.append("post1", parseInt(dataToSend[0]));
-  formData.append("post2", parseInt(dataToSend[1]));
-  formData.append("post3", parseInt(dataToSend[2]));
+  var dataToSend = preData.trim().split(" ");
+  formData.append("pre1", parseInt(dataToSend[0]));
+  formData.append("pre2", parseInt(dataToSend[1]));
+  formData.append("pre3", parseInt(dataToSend[2]));
   console.log("ran");
   fetch('/', {
   method: 'POST',
