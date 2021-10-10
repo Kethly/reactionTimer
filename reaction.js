@@ -144,7 +144,7 @@ const handleSubmit = (e) => {
   //let myForm = document.getElementById('pizzaOrder');
   //let formData = new FormData(myForm)
   //let myForm = document.getElementById('contact');
-  //let formData = new FormData();
+  let formData = new FormData();
   formData.append("name","reactionData");
   formData.append("reaction 1", "100");
   formData.append("reaction 2", "200");
