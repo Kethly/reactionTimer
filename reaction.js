@@ -156,7 +156,8 @@ const handleSubmit = (e) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: encode({
       "form-name": formData.get("form-name"),
-      ...formData
+      "name":"test",
+      "reaction 1":"100ms"
     })
   }).then(() => navigate("/thank-you/")).catch(error => alert(error))
 }
