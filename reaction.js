@@ -150,6 +150,7 @@ const handleSubmit = (e) => {
   formData.append("form-name", "reactionData");
   formData.append("name","Data");
   var dataToSend = preData.trim().split(" ");
+  console.log(dataToSend);
   formData.append("pre1", parseInt(dataToSend[0]));
   formData.append("pre2", parseInt(dataToSend[1]));
   formData.append("pre3", parseInt(dataToSend[2]));
