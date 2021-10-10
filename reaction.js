@@ -83,7 +83,7 @@ function test(ctx) {
           console.log(end)
           console.log("reaction time of:" + (currentTime-start));
           preResults += Math.round((currentTime-start)* 1000).toString() + " ";
-          preData += Math.round((currentTime-start)* 1000).toString() + " ";
+          preData += (Math.round((currentTime-start)* 1000)).toString() + " ";
         console.log(preResults);
           resolve("resolve");
           clearInterval(timer);
