@@ -1,7 +1,7 @@
 
 game = document.getElementById("game");
 ctx = game.getContext("2d");
-var preData;
+var preData = "";
 var preResults = "your results were: ";
 var gameStarted = false;
 function changeBack(ctx, color) {
