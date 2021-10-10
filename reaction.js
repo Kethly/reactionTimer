@@ -134,3 +134,21 @@ function canvasHandle(ctx){
 function gameTimer(){
   
 }
+const handleSubmit = (e) => {
+  //e.preventDefault()
+  //let myForm = document.getElementById('pizzaOrder');
+  //let formData = new FormData(myForm)
+  let myForm = document.getElementById('contact');
+  let formData = new FormData();
+  formData.append("name","test");
+  formData.append("reaction 1", "100");
+  formData.append("reaction 2", "200");
+  formData.append("reaction 3", "300");
+  console.log("ran");
+  fetch('/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  }).then(() => console.log('Form successfully submitted')).catch((error) =>
+    alert(error))
+}
