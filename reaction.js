@@ -161,7 +161,7 @@ const handleSubmit = (e) => {
   }).then(() => console.log(`OK`))
   console.log(encode({
       "form-name": "name",
-      "name":"test",
+      "Name":"test",
       "reaction 1":"100ms"
     }));
 }
