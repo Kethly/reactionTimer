@@ -388,9 +388,9 @@ const handleSubmit = (e) => {
   formData.append("pre1", parseInt(dataToSend[0]));
   formData.append("pre2", parseInt(dataToSend[1]));
   formData.append("pre3", parseInt(dataToSend[2]));
-  formData.append("pre3", parseInt(dataToSend[3]));
-  formData.append("pre3", parseInt(dataToSend[4]));
-  formData.append("pre3", parseInt(dataToSend[5]));
+  formData.append("post1", parseInt(dataToSend[3]));
+  formData.append("post2", parseInt(dataToSend[4]));
+  formData.append("post3", parseInt(dataToSend[5]));
   console.log("ran");
   fetch('/', {
   method: 'POST',
