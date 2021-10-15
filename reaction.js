@@ -5,6 +5,9 @@ var preResults = "your results were: ";
 var postResults = "your results were: ";
 countdown = 30; //grab this too
 animation = "0"; //grab this
+var myStorage = window.localStorage;
+localStorage.setItem('here', 'true');
+const ishere = localStorage.getItem('here');
 var fResults = [];
 var gameStarted = false;
 var nextEvent;
@@ -24,6 +27,7 @@ async function screentext(text) {
   await sleep(2000);
 }
 window.onload = function () {
+  if(ishere){console.log("local storage working");}
   changeBack(ctx, "black");
   write(ctx, "Click To Start");
   nextEvent = function(){
