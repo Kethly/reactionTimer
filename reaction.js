@@ -7,7 +7,7 @@ countdown = 30; //grab this too
 animation = "0"; //grab this
 var myStorage = window.localStorage;
 //localStorage.setItem('here', 'true');
-localStorage.clear();
+//localStorage.clear();
 const ishere = localStorage.getItem('here');
 var fResults = [];
 var gameStarted = false;
@@ -28,7 +28,7 @@ async function screentext(text) {
   await sleep(2000);
 }
 window.onload = function () {
-  if(ishere){
+  if(ishere === "true"){
   changeBack(ctx, "black");
   write(ctx, "Click To Start");
   nextEvent = function(){
