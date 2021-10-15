@@ -28,7 +28,7 @@ async function screentext(text) {
   await sleep(2000);
 }
 window.onload = function () {
-  if(ishere === ""){
+  if(!ishere){
   changeBack(ctx, "black");
   write(ctx, "Click To Start");
   nextEvent = function(){
