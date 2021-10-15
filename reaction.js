@@ -6,8 +6,8 @@ var postResults = "your results were: ";
 countdown = 30; //grab this too
 animation = "0"; //grab this
 var myStorage = window.localStorage;
-localStorage.setItem('here', 'true');
-localStorage.clear();
+//localStorage.setItem('here', 'true');
+//localStorage.clear();
 const ishere = localStorage.getItem('here');
 var fResults = [];
 var gameStarted = false;
@@ -28,13 +28,16 @@ async function screentext(text) {
   await sleep(2000);
 }
 window.onload = function () {
-  if(ishere){console.log("local storage working");} else{console.log("it does not exist");}
+  if(ishere){
   changeBack(ctx, "black");
   write(ctx, "Click To Start");
   nextEvent = function(){
       gameStarted = true;
       gameSetUp(ctx); 
-  }
+  }} 
+    else{console.log("it does not exist");
+         window.location.replace("https://reactionexperiment.netlify.app/thank-you");}
+  
   //setInterval(canvasHandle(ctx),1000/60);
 };
 
@@ -59,21 +62,21 @@ async function checkNormal(numExp){
 }
 
 async function preTest(ctx) {
-  // await screentext("This is an experiment.");
-  // await screentext("The goal of this experiment");
-  // await screentext("Is to determine");
-  // await screentext("if a small game");
-  // await screentext("has an effect");
-  // await screentext("on your reaction time");
-  // await screentext("This will start out");
-  // await screentext("with three reaction tests.");
-  // await screentext("A training game");
-  // await screentext("And three more reaction tests.");
-  // await screentext("First are the reaction tests.");
-  // await screentext("wait for the screen");
-  // await screentext("to turn red");
-  // await screentext("and then click");
-  // await screentext("good luck!");
+  await screentext("This is an experiment.");
+  await screentext("The goal of this experiment");
+  await screentext("Is to determine");
+  await screentext("if a small game");
+  await screentext("has an effect");
+  await screentext("on your reaction time");
+  await screentext("This will start out");
+  await screentext("with three reaction tests.");
+  await screentext("A training game");
+  await screentext("And three more reaction tests.");
+  await screentext("First are the reaction tests.");
+  await screentext("wait for the screen");
+  await screentext("to turn red");
+  await screentext("and then click");
+  await screentext("good luck!");
   await test(ctx);
   await checkNormal(1);
   await screentext("congratz on doing your first test");
@@ -369,6 +372,7 @@ async function postTest(ctx) {
   await screentext(postResults + fResults[fResults.length - 1] + "ms");
   await sleep(1000);
   await screentext("Thank you for playing!");
+  localStorage.setItem('here', 'true');
 }
 function canvasHandle(ctx){
   //console.log("refreshed screen");
