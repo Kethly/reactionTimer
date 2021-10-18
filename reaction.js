@@ -53,7 +53,7 @@ async function screentext(text) {
 }
 window.onload = function () {
   if(ishere){console.log("it does not exist");
-         window.location.replace("https://reactionexperiment.netlify.app/thank-you");}
+         window.location.replace("https://reactionexperiment.netlify.app/you-already-submitted/");}
   
   //setInterval(canvasHandle(ctx),1000/60);
 };
