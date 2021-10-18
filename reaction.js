@@ -49,7 +49,7 @@ function changeBack(ctx, color) {
 async function screentext(text) {
   changeBack(ctx, "black");
   write(ctx, text);
-  await sleep(2000);
+  await sleep(1500);
 }
 window.onload = function () {
   if(ishere){console.log("it does not exist");
