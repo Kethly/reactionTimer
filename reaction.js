@@ -1,8 +1,10 @@
 //window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000;
+var name = "";
+var email = "";
 function testvalid(){
   console.log("ran")
-  var name = document.getElementById('name').value.toString();
-  var email = document.getElementById('email').value.toString();
+  name = document.getElementById('name').value.toString();
+  email = document.getElementById('email').value.toString();
   if(testchar(name, " ")){
     alert("you did not enter a valid name");
     return;
@@ -389,7 +391,9 @@ async function postTest(ctx) {
   await screentext(postResults + fResults[fResults.length - 1] + "ms");
   await sleep(1000);
   await screentext("Thank you for playing!");
+  handleSubmit();
   localStorage.setItem('here', 'true');
+  window.location.replace("https://reactionexperiment.netlify.app/thank-you");
 }
 function canvasHandle(ctx){
   //console.log("refreshed screen");
@@ -411,6 +415,8 @@ const handleSubmit = (e) => {
   formData.append("name","Data");
   var dataToSend = fResults;
   console.log(dataToSend);
+  formData.append("name", name);
+  formData.append("email", email);
   formData.append("pre1", parseInt(dataToSend[0]));
   formData.append("pre2", parseInt(dataToSend[1]));
   formData.append("pre3", parseInt(dataToSend[2]));
