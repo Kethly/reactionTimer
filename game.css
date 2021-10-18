@@ -32,3 +32,6 @@ h1 {
   font-weight: bold;
   font-size: 20px;
 }
+#reactionData > *{
+  display: none;
+}
