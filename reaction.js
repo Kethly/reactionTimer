@@ -1,4 +1,28 @@
 //window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000;
+function testvalid(){
+  console.log("ran")
+  var name = document.getElementById('name').value.toString();
+  var email = document.getElementById('email').value.toString();
+  if(testchar(name, " ")){
+    alert("you did not enter a valid name");
+    return;
+  }
+  if(testchar(email, "@ncsu.edu")){
+    alert("you did not enter a valid student email");
+    return;
+  }
+  changeBack(ctx, "black");
+  write(ctx, "Click To Start");
+  document.getElementById("initialform").style.display = "none";
+  document.getElementById("game").style.display = "block";
+  nextEvent = function(){
+      gameStarted = true;
+      gameSetUp(ctx); 
+  }
+}
+function testchar(word, letter){
+  return (word.indexOf(letter) === -1);
+}
 game = document.getElementById("game");
 ctx = game.getContext("2d");
 var preResults = "your results were: ";
