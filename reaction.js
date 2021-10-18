@@ -386,11 +386,11 @@ async function postTest(ctx) {
   await screentext("did the training game work?");
   await test(ctx);
   await checkNormal(6);
+  handleSubmit();
+  localStorage.setItem('here', 'true');
   await screentext(postResults + fResults[fResults.length - 1] + "ms");
   await sleep(1000);
   await screentext("Thank you for playing!");
-  handleSubmit();
-  localStorage.setItem('here', 'true');
   window.location.replace("https://reactionexperiment.netlify.app/thank-you");
 }
 function canvasHandle(ctx){
