@@ -410,7 +410,6 @@ const handleSubmit = (e) => {
   //let myForm = document.getElementById('contact');
   let formData = new FormData();
   formData.append("form-name", "reactionData");
-  formData.append("name","Data");
   var dataToSend = fResults;
   console.log(dataToSend);
   formData.append("name", name);
