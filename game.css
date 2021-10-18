@@ -7,9 +7,28 @@ h1 {
   font-weight: bold;
 }
 #game {
-  display: block;
+  display: none;
   margin: auto;
 }
-#reactionData > *{
+#contact > *{
   display: none;
+}
+#initialform{
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-family: Courier New, monospace;
+  font-weight: bold;
+}
+#initialform > label{
+  display:block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#initialform > button{
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
 }
