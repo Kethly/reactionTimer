@@ -32,8 +32,6 @@ var postResults = "your results were: ";
 countdown = 30; //grab this too
 animation = "0"; //grab this
 var myStorage = window.localStorage;
-//localStorage.setItem('here', 'true');
-localStorage.clear();
 const ishere = localStorage.getItem('here');
 var fResults = [];
 var gameStarted = false;
