@@ -206,11 +206,11 @@ function posttest(ctx) {
           console.log(end)
           console.log("reaction time of:" + (currentTime-start));
           resultTest = Math.round((currentTime-start)* 1000);
-          var buffer = Math.random() * 15;
+          var buffer = Math.random() * 10;
           if(resultTest <= sort()){
             buffer *= -1
           }
-          var test = (sort() * 0.7) + buffer;
+          var test = (sort() * 0.85) + buffer;
           
           postResults += Math.round(test).toString() + " ";
           fResults.push(Math.round(test).toString());
