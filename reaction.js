@@ -66,6 +66,7 @@ async function gameSetUp(ctx) {
 async function checkNormal(numExp){
   await sleep(1000);//
     while(fResults.length != numExp){
+      alert("you either clicked too early or too late, click ok to try again");
       if(numExp < 4){
       await test(ctx);
       } else if(numExp < 6){
