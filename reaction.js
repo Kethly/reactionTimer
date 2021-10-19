@@ -66,7 +66,7 @@ async function gameSetUp(ctx) {
 async function checkNormal(numExp){
   await sleep(1000);//
     while(fResults.length != numExp){
-      alert("you either clicked too early or too late, click ok when you are ready to try again");
+      
       if(numExp < 4){
       await test(ctx);
       } else if(numExp < 6){
@@ -137,6 +137,7 @@ function test(ctx) {
           write(ctx, "you didn't do it right");
         setTimeout(
           function(){
+            alert("you either clicked too early or too late, click ok when you are ready to try again");
             //screentext("try again")
             setTimeout(
               function(){resolve("resolve");},1000);}, 1000);
@@ -195,7 +196,8 @@ function posttest(ctx) {
           write(ctx, "you didn't do it right");
         setTimeout(
           function(){
-            screentext("try again")
+            //screentext("try again")
+            alert("you either clicked too early or too late, click ok when you are ready to try again");
             setTimeout(
               function(){resolve("resolve");},1000);}, 1000);
           clearInterval(timer);
